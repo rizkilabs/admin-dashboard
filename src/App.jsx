@@ -7,15 +7,33 @@ import "./App.css";
 
 function App() {
   const [activeMenu, setActiveMenu] = useState("dashboard");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const activeTitle = menuItems.find((m) => m.id === activeMenu)?.label;
 
+  const handleMenuClick = (id) => {
+    setActiveMenu(id);
+    setSidebarOpen(false); // tutup drawer setelah pilih menu (mobile)
+  };
+
   return (
     <div className="app">
-      <Sidebar activeMenu={activeMenu} onMenuClick={setActiveMenu} />
+      <Sidebar
+        activeMenu={activeMenu}
+        onMenuClick={handleMenuClick}
+        isOpen={sidebarOpen}
+      />
+
+      <div
+        className={`overlay ${sidebarOpen ? "show" : ""}`}
+        onClick={() => setSidebarOpen(false)}
+      />
 
       <div className="main">
-        <Navbar title={activeTitle} onToggleSidebar={() => {}} />
+        <Navbar
+          title={activeTitle}
+          onToggleSidebar={() => setSidebarOpen((prev) => !prev)}
+        />
         <main className="content">
           {activeMenu === "dashboard" ? (
             <Dashboard />

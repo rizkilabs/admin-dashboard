@@ -3,9 +3,9 @@ import "./Sidebar.css";
 import { menuItems } from "../data/menu";
 import "./Sidebar.css";
 
-function Sidebar({ activeMenu, onMenuClick }) {
+function Sidebar({ activeMenu, onMenuClick, isOpen }) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-brand">AdminPanel</div>
 
       <nav>

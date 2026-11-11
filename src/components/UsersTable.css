@@ -81,3 +81,14 @@
   background: #fef3c7;
   color: #b45309;
 }
+
+@media (max-width: 768px) {
+  .table-header {
+    padding: 12px 16px;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 10px 14px;
+  }
+}

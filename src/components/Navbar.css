@@ -65,3 +65,27 @@
   font-size: 0.9rem;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-search {
+    width: 120px;
+  }
+
+  .navbar-name {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-search {
+    display: none;
+  }
+}
