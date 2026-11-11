@@ -32,6 +32,10 @@ npm install
 npm run dev
 ```
 
+## Demo
+
+https://rizkilabs.github.io/admin-dashboard
+
 ## Struktur Folder
 
 ```text
