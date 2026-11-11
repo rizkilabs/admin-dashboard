@@ -1,12 +1,7 @@
 import "./Sidebar.css";
 
-const menuItems = [
-  { id: "dashboard", label: "Dashboard", icon: "🏠" },
-  { id: "users", label: "Pengguna", icon: "👥" },
-  { id: "transactions", label: "Transaksi", icon: "💳" },
-  { id: "reports", label: "Laporan", icon: "📊" },
-  { id: "settings", label: "Pengaturan", icon: "⚙️" },
-];
+import { menuItems } from "../data/menu";
+import "./Sidebar.css";
 
 function Sidebar({ activeMenu, onMenuClick }) {
   return (

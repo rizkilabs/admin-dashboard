@@ -10,15 +10,6 @@
   min-width: 0; /* biar tabel lebar tidak merusak layout */
 }
 
-.navbar {
-  height: var(--navbar-height);
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
-}
-
 .content {
   flex: 1;
   padding: 24px;
