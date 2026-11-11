@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import Dashboard from "./pages/Dashboard";
 import { menuItems } from "./data/menu";
 import "./App.css";
 
@@ -16,7 +17,11 @@ function App() {
       <div className="main">
         <Navbar title={activeTitle} onToggleSidebar={() => {}} />
         <main className="content">
-          <h1>{activeTitle}</h1>
+          {activeMenu === "dashboard" ? (
+            <Dashboard />
+          ) : (
+            <h1 className="page-title">{activeTitle}</h1>
+          )}
         </main>
       </div>
     </div>
