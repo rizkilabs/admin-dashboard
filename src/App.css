@@ -3,14 +3,6 @@
   min-height: 100vh;
 }
 
-.sidebar {
-  width: var(--sidebar-width);
-  background: var(--sidebar-bg);
-  color: var(--sidebar-text);
-  flex-shrink: 0;
-  padding: 20px;
-}
-
 .main {
   flex: 1;
   display: flex;
